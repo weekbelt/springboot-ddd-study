@@ -33,6 +33,9 @@ public class Order {
     @Version
     private long version;
 
+    @Embedded
+    private Orderer orderer;
+
     @ElementCollection
     @CollectionTable(name = "order_line", joinColumns = @JoinColumn(name = "order_number"))
     private List<OrderLine> orderLines;
